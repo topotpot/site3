@@ -63,7 +63,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 120px;
+    height: 100px;
     background-color: #444;
     display: flex;
     justify-content: center;
@@ -71,8 +71,8 @@ header {
 }
 
 .club-logo {
-    width: 500px;
-    height: 500px;
+    width: 200px;
+    height: 200px;
 }
 
 .side-menu {
@@ -85,7 +85,7 @@ header {
     background-color: #444;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 70px;
+    padding-top: 60px;
 }
 
 /* Ссылки внутри меню */
