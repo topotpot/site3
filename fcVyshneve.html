@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт футбольного клуба</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="document.body.style.opacity='1'">
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">
+            &#9776; <!-- Три полоски -->
+        </div>
+    </header>
+    
+    <nav id="side-menu" class="side-menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+        <a href="fcVyshneve.html">Головна</a>
+        <a href="about.html">Про нас</a>
+        <a href="teams.html">Команди</a>
+        <a href="matches.html">Матчі</a>
+        <a href="news1.html">Новини</a>
+        <a href="contact.html">Контакти</a>
+    </nav>
+    
+    <div id="main-content">
+        <!-- Основное содержимое страницы -->
+    </div>
 
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("side-menu");
+            if (menu.style.width === "250px") {
+                menu.style.width = "0";
+            } else {
+                menu.style.width = "250px";
+            }
+        }
+    </script>
+</body>
+</html>
