@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Матчі</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">
+            &#9776; <!-- Три полоски -->
+        </div>
+    </header>
+    
+    <nav id="side-menu" class="side-menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+        <a href="fcVyshneve.html">Головна</a>
+        <a href="about.html">Про нас</a>
+        <a href="teams.html">Команди</a>
+        <a href="matches.html">Матчі</a>
+        <a href="news1.html">Новини</a>
+        <a href="contact.html">Контакти</a>
+    </nav>
+    
+    <div id="main-content" class="fade-in">
+        <h1>Матчі</h1>
+        <section class="matches-list">
+            <!-- Пример карточки матча -->
+            <div class="match-item" onclick="openMatch('match1')">
+                <h2>Команда A vs Команда B</h2>
+                <p class="match-date">Дата: 01 сентября 2024</p>
+                <p class="match-score">Счет: 2 - 1</p>
+                <p class="match-winner">Победитель: Команда A</p>
+                <p class="match-time">Время: 18:00</p>
+            </div>
 
+            <div class="match-item" onclick="openMatch('match2')">
+                <h2>Команда C vs Команда D</h2>
+                <p class="match-date">Дата: 25 августа 2024</p>
+                <p class="match-score">Счет: 3 - 3</p>
+                <p class="match-winner">Победитель: Ничья</p>
+                <p class="match-time">Время: 20:00</p>
+            </div>
+
+            <!-- Модальное окно для полной информации о матче -->
+            <div id="match1" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeMatch('match1')">&times;</span>
+                    <h2>Команда A vs Команда B</h2>
+                    <p>Подробная информация о матче 1...</p>
+                    <p class="match-date">Дата: 01 сентября 2024</p>
+                    <p class="match-score">Счет: 2 - 1</p>
+                    <p class="match-winner">Победитель: Команда A</p>
+                    <div class="match-photos">
+                        <img src="photo1.jpg" alt="Фото 1">
+                        <img src="photo2.jpg" alt="Фото 2">
+                    </div>
+                </div>
+            </div>
+
+            <div id="match2" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeMatch('match2')">&times;</span>
+                    <h2>Команда C vs Команда D</h2>
+                    <p>Подробная информация о матче 2...</p>
+                    <p class="match-date">Дата: 25 августа 2024</p>
+                    <p class="match-score">Счет: 3 - 3</p>
+                    <p class="match-winner">Победитель: Ничья</p>
+                    <div class="match-photos">
+                        <img src="photo3.jpg" alt="Фото 3">
+                        <img src="photo4.jpg" alt="Фото 4">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Добавляйте другие матчи здесь -->
+        </section>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("side-menu");
+            if (menu.style.width === "250px") {
+                menu.style.width = "0";
+                document.getElementById("main-content").style.marginLeft = "0";
+            } else {
+                menu.style.width = "250px";
+                document.getElementById("main-content").style.marginLeft = "250px";
+            }
+        }
+
+        function openMatch(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+
+        function closeMatch(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+
+        // Закрытие модального окна при клике вне его содержимого
+        window.onclick = function(event) {
+            var modals = document.getElementsByClassName('modal');
+            for (var i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
