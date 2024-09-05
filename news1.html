@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новини</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="document.body.style.opacity='1'">
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">
+            &#9776; <!-- Три полоски -->
+        </div>
+    </header>
+    
+    <nav id="side-menu" class="side-menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+        <a href="fcVyshneve.html">Головна</a>
+        <a href="about.html">Про нас</a>
+        <a href="teams.html">Команди</a>
+        <a href="matches.html">Матчі</a>
+        <a href="news1.html">Новини</a>
+        <a href="contact.html">Контакти</a>
+    </nav>
+    
+    <div id="main-content">
+        <h1>Новини</h1>
+        <section class="news-list">
+            <!-- Пример блока новостей -->
+            <div class="news-item" onclick="openNews('news1')">
+                <h2>Заголовок новости 1</h2>
+                <p>Дата: 30 августа 2024</p>
+            </div>
 
+            <div class="news-item" onclick="openNews('news2')">
+                <h2>Заголовок новости 3</h2>
+                <p>Дата: 29 августа 2024</p>
+            </div>
+			<div class="news-item" onclick="openNews('news2')">
+                <h2>Заголовок новости 4</h2>
+                <p>Дата: 29 августа 2024</p>
+            </div>
+			<div class="news-item" onclick="openNews('news2')">
+                <h2>Заголовок новости 5</h2>
+                <p>Дата: 29 августа 2024</p>
+            </div>
+			<div class="news-item" onclick="openNews('news2')">
+                <h2>Заголовок новости 6</h2>
+                <p>Дата: 29 августа 2024</p>
+            </div>
+			<div class="news-item" onclick="openNews('news2')">
+                <h2>Заголовок новости 7</h2>
+                <p>Дата: 29 августа 2024</p>
+            </div>
+			<div class="news-item" onclick="openNews('news2')">
+                <h2>Заголовок новости 8</h2>
+                <p>Дата: 29 августа 2024</p>
+            </div>
+			<div class="news-item" onclick="openNews('news2')">
+                <h2>Заголовок новости 9</h2>
+                <p>Дата: 29 августа 2024</p>
+            </div>
+			<div class="news-item" onclick="openNews('news2')">
+                <h2>Заголовок новости 2</h2>
+                <p>Дата: 29 августа 2024</p>
+            </div>
+			<div class="news-item" onclick="openNews('news2')">
+                <h2>Заголовок новости 2</h2>
+                <p>Дата: 29 августа 2024</p>
+            </div>
+			
+			
+			
+
+            <!-- Модальное окно для полной новости -->
+            <div id="news1" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeNews('news1')">&times;</span>
+                    <h2>Заголовок новости 1</h2>
+                    <p>Полный текст новости 1...</p>
+                    <p>Дата: 30 августа 2024</p>
+                </div>
+            </div>
+
+            <div id="news2" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeNews('news2')">&times;</span>
+                    <h2>Заголовок новости 2</h2>
+                    <p>Полный текст новости 2...</p>
+                    <p>Дата: 29 августа 2024</p>
+                </div>
+            </div>
+
+            <!-- Добавляйте другие новости здесь -->
+        </section>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("side-menu");
+            if (menu.style.width === "250px") {
+                menu.style.width = "0";
+                document.getElementById("main-content").style.marginLeft = "0";
+            } else {
+                menu.style.width = "250px";
+                document.getElementById("main-content").style.marginLeft = "250px";
+            }
+        }
+
+        function openNews(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+
+        function closeNews(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+    </script>
+</body>
+</html>
