@@ -66,14 +66,13 @@ header {
     height: 100px;
     background-color: #444;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: right;
+    align-items: right;
 }
 
 .club-logo {
-    max-width: 80px;
-    max-height: 80px;
-    border-radius: 50%;
+    max-width: 500px;
+    max-height: 500px;
 }
 
 .side-menu {
