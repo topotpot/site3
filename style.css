@@ -71,8 +71,8 @@ header {
 }
 
 .club-logo {
-    width: 200px;
-    height: 200px;
+    width: 90px;
+    height: 140px;
 }
 
 .side-menu {
@@ -87,6 +87,9 @@ header {
     transition: 0.5s;
     padding-top: 60px;
 }
+.side-menu a:first-child {
+    margin-top: 150px; /* Отступ для первой ссылки от логотипа */
+}
 
 /* Ссылки внутри меню */
 .side-menu a {
@@ -96,6 +99,7 @@ header {
     color: white;
     display: block;
     transition: 0.3s;
+	margin-top: 20px; /* Отступ сверху для каждой ссылки */
 }
 
 .side-menu a:hover {
