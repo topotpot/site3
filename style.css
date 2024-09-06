@@ -73,6 +73,7 @@ header {
 .club-logo {
     width: 120px;
     height: 160px;
+    margin-top:15px;
 }
 
 .side-menu {
@@ -85,7 +86,7 @@ header {
     background-color: #444;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 100px;
+    padding-top: 150px;
 }
 
 /* Ссылки внутри меню */
