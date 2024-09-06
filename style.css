@@ -61,12 +61,13 @@ header {
 .menu-header {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -20px;
     width: 100%;
     height: 100px;
     background-color: #444;
     display: flex;
-    margin-right:60px;
+    justify-content: center;
+    align-items: center;
 }
 
 .club-logo {
@@ -85,7 +86,7 @@ header {
     background-color: #444;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 180px;
+    padding-top: 150px;
 }
 
 /* Ссылки внутри меню */
